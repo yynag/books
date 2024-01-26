@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: How to Fail at Almost Everything and Still Win Big
       link: /docs/book-how-to-fail/index
+    - theme: alt
+      text: What Is ChatGPT Doing ... and Why Does It Work?
+      link: /docs/book-what-chatgpt/index
 
 features:
   - title: Feature A
