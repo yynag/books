@@ -14,6 +14,6 @@
 
 ## [PART 5 WHY JOINING A TRIBE MAKES YOU POWERFUL AND BLIND](./part5)
 
-## [ACKNOWLEDGMENTS](./acknoledgements)
+## [ACKNOWLEDGMENTS](./acknowledgements)
 
 ## [Appendices](./appendices)
