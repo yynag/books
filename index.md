@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: What Is ChatGPT Doing ... and Why Does It Work?
       link: /docs/book-what-chatgpt/index
+    - theme: alt
+      text: Antifragile
+      link: /docs/book-incerto/antifragile
 
 features:
   - title: Feature A

@@ -19,7 +19,7 @@ export default defineConfig({
       provider: 'local'
     },
     outline: {
-      level: [1,3]
+      level: [1, 4]
     },
     lastUpdated: true,
     cleanUrls: true,
@@ -30,8 +30,8 @@ export default defineConfig({
   },
   markdown: {
     image: {
-      // 默认禁用图片懒加载
       lazyLoading: true
-    }
+    },
+    toc: { level: [2, 3, 4] },
   }
 })
