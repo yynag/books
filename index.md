@@ -22,6 +22,9 @@ hero:
     - theme: alt
       text: Antifragile
       link: /docs/book-incerto/antifragile
+    - theme: alt
+      text: 7 Rules of Powers
+      link: /docs/book-power/index
 
 features:
   - title: Feature A
