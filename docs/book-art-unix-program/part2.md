@@ -691,7 +691,7 @@ Just as data file metaformats have evolved to simplify serialization for storage
 #### 5.4.1 The Classical Internet Application Metaprotocol
 Marshall Rose’s RFC 3117, On the Design of Application Protocols,5 provides an excellent overview of the design issues in Internet application protocols. It makes explicit several of the tropes in classical Internet application protocols that we observed in our examination of SMTP, POP, and IMAP, and provides an instructive taxonomy of such protocols. It is recommended reading.
 
-5 See RFC 3117 <ftp://ftp.rfc-editor.org/in-notes/rfc3117.txt>.
+5 See RFC 3117 <ftp://ftp.rfc-editor.org/in-notes/rfc3117.txt/>.
 
 The classical Internet metaprotocol is textual. It uses single-line requests and responses, except for payloads which may be multiline. Payloads are shipped either with a preceding length in octets or with a terminator that is the line ".\r\n". In the latter case the payload is byte-stuffed; all lines that start with a period get another period prepended, and the receiver side is responsible for both recognizing the termination and stripping away the stuffing. Response lines consist of a status code followed by a human-readable message.
 
@@ -711,7 +711,7 @@ With this advantage comes a risk. It means that your web server and its plugins 
 
 RFC 3205, On the Use of HTTP As a Substrate,6 has good design advice for anyone considering using HTTP as the underlayer of an application protocol, including a summary of the tradeoffs and problems involved.
 
-6 See RFC 3205 <http://www.faqs.org/rfcs/rfc3205.html>.
+6 See RFC 3205 <http://www.faqs.org/rfcs/rfc3205.html/>.
 
 
 #### 5.4.2.1 Case Study: The CDDB/freedb.org Database
@@ -733,13 +733,13 @@ From the software side, HTTP 1.1 is widely deployed. It already solves many of t
 
 Most network-aware printers already embed a web server, because that’s the natural way to make the status of the printer remotely queryable by human beings. Thus, the incremental cost of adding IPP service to the printer firmware is not large. (This is an argument that could be applied to a remarkably wide range of other network-aware hardware, including vending machines and coffee makers7 and hot tubs!)
 
-7 See RFC 2324 <http://www.ietf.org/rfc/rfc2324.txt> and RFC 2325 <http://www.ietf.org/rfc/rfc2325.txt>.
+7 See RFC 2324 <http://www.ietf.org/rfc/rfc2324.txt/> and RFC 2325 <http://www.ietf.org/rfc/rfc2325.txt/>.
 
 About the only serious drawback of layering IPP over HTTP is that the protocol is completely driven by client requests. Thus there is no space in the model for printers to ship asynchronous alert messages back to clients. (However, smarter clients could run a trivial HTTP server to receive such alerts formatted as HTTP requests from the printer.)
 
 
 #### 5.4.3 BEEP: Blocks Extensible Exchange Protocol
-BEEP (formerly BXXP) is a generic protocol machine that competes with HTTP for the role of universal underlayer for application protocols. There is a niche open because there is not as yet any other more established metaprotocol that is appropriate for truly peer-to-peer applications, as opposed to the client-server applications that HTTP handles well. A project website <http://www.beepcore.org/beepcore/docs/sl-beep.jsp> provides access to standards and open-source implementations in several languages.
+BEEP (formerly BXXP) is a generic protocol machine that competes with HTTP for the role of universal underlayer for application protocols. There is a niche open because there is not as yet any other more established metaprotocol that is appropriate for truly peer-to-peer applications, as opposed to the client-server applications that HTTP handles well. A project website <http://www.beepcore.org/beepcore/docs/sl-beep.jsp/> provides access to standards and open-source implementations in several languages.
 
 BEEP has features to support both client-server and peer-to-peer modes. The authors designed the BEEP protocol and support library so that picking the right options abstracts away messy issues like data encoding, flow control, congestion-handling, support of end-to-end encryption, and assembling a large response composed of multiple transmissions,
 
@@ -757,7 +757,7 @@ SOAP is a more heavyweight RPC protocol with a richer type ontology that include
 
 XML-RPC and SOAP, considered as remote procedure call methods, have some associated risks that we discuss at the end of Chapter 7.
 
-Jabber is a peer-to-peer protocol designed to support instant messaging and presence. What makes it interesting as an application protocol is that it supports passing around XML forms and live documents. Specifications, documentation, and open-source implementations are available at the Jabber Software Foundation <http://www.jabber.org/about/overview.html> site.
+Jabber is a peer-to-peer protocol designed to support instant messaging and presence. What makes it interesting as an application protocol is that it supports passing around XML forms and live documents. Specifications, documentation, and open-source implementations are available at the Jabber Software Foundation <http://www.jabber.org/about/overview.html/> site.
 
 ## 6. Transparency: Let There Be Light
 
@@ -1710,7 +1710,7 @@ We’ve included a glance at XSLT here partly to illustrate the point that ’de
 
 XSLT: Mastering XML Transformations [Tidwell] is a good introduction to the language. A brief tutorial with examples is available on the Web.8
 
-8 XSL Concepts and Practical Use <http://nwalsh.com/docs/tutorials/xsl/xsl/slides.html>.
+8 XSL Concepts and Practical Use <http://nwalsh.com/docs/tutorials/xsl/xsl/slides.html/>.
 
 
 #### 8.2.6 Case Study: The Documenter’s Workbench Tools
@@ -1822,7 +1822,7 @@ PostScript is a minilanguage specialized for describing typeset text and graphic
 
 14 There is a GhostScript Project site <http://www.cs.wisc.edu/~ghost/>.
 
-15 A First Guide To PostScript <http://www.cs.indiana.edu/docproject/programming/postscript/postscript.html>.
+15 A First Guide To PostScript <http://www.cs.indiana.edu/docproject/programming/postscript/postscript.html/>.
 
 PostScript bears some functional resemblance to troff markup; both are intended to control printers and other imaging devices, and both are normally generated by programs or macro packages rather than being hand-written by humans. But where troff requests are a jumped-up set of format-control codes with some language features tacked on as an afterthought, PostScript was designed from the ground up as a language and is far more expressive and powerful. The main thing that makes Postscript useful is that algorithmic descriptions of images written in it are far smaller than the bitmaps they render to, and so take up less storage and communication bandwidth.
 
@@ -1893,7 +1893,7 @@ The standard reference for JavaScript is JavaScript: The Definitive Guide [Flana
 ### 8.3 Designing Minilanguages
 When is designing a minilanguage appropriate? We’ve observed that minilanguages offer a way to push problem specifications to a higher level, and seen how this operates in several case studies. The flip side of this observation is that a minilanguage is likely to be a good approach whenever the domain primitives in your application area are simple and stereotyped, but the ways in which users are likely to want to apply them are fluid and varying.
 
-For some related ideas, find a description of the Alternate Hard And Soft Layers <http://www.c2.com/cgi/wiki?AlternateHardAndSoftLayers> and Scripted Components <http://www.doc.ic.ac.uk/~np2/patterns/scripting/scripting.html> design patterns.
+For some related ideas, find a description of the Alternate Hard And Soft Layers <http://www.c2.com/cgi/wiki?AlternateHardAndSoftLayers/> and Scripted Components <http://www.doc.ic.ac.uk/~np2/patterns/scripting/scripting.html/> design patterns.
 
 An interesting survey of design styles and techniques in minilanguages is  Notable Design Patterns for Domain-Specific Languages [Spinellis].
 
@@ -2042,7 +2042,7 @@ At the upper end of its complexity scale, data-driven programming merges into wr
 
 
 #### 9.1.1 Case Study: ascii
-I maintain a program called ascii, a very simple little utility that tries to interpret its command-line arguments as names of ASCII (American Standard Code for Information Interchange) characters and report all the equivalent names. Code and documentation for the tool are available from the project page <http://www.catb.org/~esr/ascii>. Here is an illustrative screenshot:
+I maintain a program called ascii, a very simple little utility that tries to interpret its command-line arguments as names of ASCII (American Standard Code for Information Interchange) characters and report all the equivalent names. Code and documentation for the tool are available from the project page <http://www.catb.org/~esr/ascii/>. Here is an illustrative screenshot:
 
 images
 
@@ -2190,7 +2190,7 @@ Example 9.6. Desired output format for the star table.
 
 images
 
-The thick-as-a-plank way to handle this would be to hand-write HTML table code for the desired appearance. Then, each time we want to add a name, we’d have to hand-write another set of <tr> and <td> tags for the entry. This would get very tedious very quickly. But what’s worse, changing the format of the list would require hand-hacking every entry.
+The thick-as-a-plank way to handle this would be to hand-write HTML table code for the desired appearance. Then, each time we want to add a name, we’d have to hand-write another set of <tr/> and <td/> tags for the entry. This would get very tedious very quickly. But what’s worse, changing the format of the list would require hand-hacking every entry.
 
 The superficially clever way to handle this would be to make this data a three-column relation in a database, then use some fancy CGI3 technique or a database-capable templating engine like PHP to generate the page on the fly. But suppose we know that the list will not change very often, don’t want to run a database server just to be able to display this list, and don’t want to load the server with unnecessary CGI traffic?
 
@@ -2207,12 +2207,12 @@ We could in a pinch have done without the explicit colon field delimiters, using
 
 We then write a script in shell, Perl, Python, or Tcl that massages this file into an HTML table, and run that each time we add an entry. The old-school Unix way would revolve around the following nigh-unreadable sed(1) invocation
 
-sed -e 's,^,<tr><td>,' -e 's,$,</td></tr>,' -e 's,:,</td><td>,g'
+sed -e 's,^,<tr/><td/>,' -e 's,$,</td/></tr/>,' -e 's,:,</td/><td/>,g'
 
 
 or this perhaps slightly more scrutable awk(1) program:
 
-awk -F: '{printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>\n", \
+awk -F: '{printf("<tr/><td/>%s</td/><td/>%s</td/><td/>%s</td/></tr/>\n", \
                  $1, $2, $3)}'
 
 
@@ -2221,7 +2221,7 @@ awk -F: '{printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>\n", \
 A new-school solution might center on this Python code, or on equivalent Perl:
 
 for row in map(lambda x:x.rstrip().split(':'),sys.stdin.readlines()):
-    print "<tr><td>" + "</td><td>".join(row) + "</td></tr>"
+    print "<tr/><td/>" + "</td/><td/>".join(row) + "</td/></tr/>"
 
 
 These scripts took about five minutes each to write and debug, certainly less time than would have been required to either hand-hack the initial HTML or create and verify the database. The combination of the table and this code will be much simpler to maintain than either the under-engineered hand-hacked HTML or the over-engineered database.
@@ -2639,7 +2639,7 @@ When you’re choosing command-line option letters for your program, look at the
 
 The GNU project recommends conventional meanings for a few double-dash options in the GNU coding standards.5 It also lists long options which, though not standardized, are used in many GNU programs. If you are using GNU-style options, and some option you need has a function similar to one of those listed, by all means obey the Rule of Least Surprise and reuse the name.
 
-5 See the Gnu Coding Standards <http://www.gnu.org/prep/standards.html>.
+5 See the Gnu Coding Standards <http://www.gnu.org/prep/standards.html/>.
 
 
 #### 10.5.2 Portability to Other Operating Systems
@@ -3031,7 +3031,7 @@ In Chapter 7 we argued against building monster single-process monoliths, and th
 
 (The other, more obvious candidate for that distinction would be filters. But filters are more often found in non-Unix environments than engine/interface pairs with bidirectional traffic between them. Simulating pipelines is easy; the more sophisticated IPC mechanisms required for engine/interface pairs are hard.)
 
-Owen Taylor, maintainer of the GTK+ library widely used for writing user interfaces under X, beautifully brings out the engineering benefits of this kind of partitioning at the end of his note Why GTK_MODULES is not a security hole <http://www.gtk.org/setuid.html>; he finishes by writing “[T]he secure setuid program is a 500 line program that does only what it needs to, rather than a 500,000 line library whose essential task is user interfaces”.
+Owen Taylor, maintainer of the GTK+ library widely used for writing user interfaces under X, beautifully brings out the engineering benefits of this kind of partitioning at the end of his note Why GTK_MODULES is not a security hole <http://www.gtk.org/setuid.html/>; he finishes by writing “[T]he secure setuid program is a 500 line program that does only what it needs to, rather than a 500,000 line library whose essential task is user interfaces”.
 
 This is not a new idea. Xerox PARC’s early research into graphical user interfaces led them to propose the “model-view-controller” pattern as an archetype for GUIs.
 
@@ -3142,7 +3142,7 @@ When the front and back ends of a system fulfilling this design pattern are comb
 
 The script-fu facility of GIMP is another good example. GIMP is a powerful open-source graphics editor. It has a GUI resembling that of Adobe Photoshop. Script-fu allows GIMP to be scripted using Scheme (a dialect of Lisp); scripting through Tcl, or Perl or Python is also available. Programs written in any of these languages can call GIMP internals through its plugin interface. The demonstration application for this facility is a Web page5 which allows people to construct simple logos and graphic buttons through a CGI interface that passes a generated Scheme program to an instance of GIMP, and returns a finished image.
 
-5 Script-Fu page <http://www.xcf.berkeley.edu/~gimp/script-fu/script-fu.html>.
+5 Script-Fu page <http://www.xcf.berkeley.edu/~gimp/script-fu/script-fu.html/>.
 
 
 ### 11.7 Applying Unix Interface-Design Patterns
@@ -3222,7 +3222,7 @@ Go ahead and give your GUIs progress bars for long operations. That’s good sty
 
 6 If your windowing system supports translucent popups that intrude less between the user and the application, use them.
 
-In general, it’s bad style to tell the user things he already knows (“Program <foo> is starting up...”, or “Program <foo> is exiting” are two classic offenders). Your interface design as a whole should obey the Rule of Least Surprise, but the content of messages should obey a Rule of Most Surprise—be chatty only about things that deviate from what’s normally expected.
+In general, it’s bad style to tell the user things he already knows (“Program <foo/> is starting up...”, or “Program <foo/> is exiting” are two classic offenders). Your interface design as a whole should obey the Rule of Least Surprise, but the content of messages should obey a Rule of Most Surprise—be chatty only about things that deviate from what’s normally expected.
 
 This rule has even greater force for confirmation prompts. Constantly asking for confirmation where the answer is almost always “yes” conditions the user to press “yes” without thinking about it, a habit that can have very unfortunate consequences. Programs should request confirmation only when there is good reason to suspect that the answer might be “no no no!” A confirmation request that is not a surprise is a strong hint of bad design. Any confirmation prompts at all may be a sign that what your interface really needs is an undo command.
 
@@ -3665,7 +3665,7 @@ In Chapter 7 we argued against building monster single-process monoliths, and th
 
 (The other, more obvious candidate for that distinction would be filters. But filters are more often found in non-Unix environments than engine/interface pairs with bidirectional traffic between them. Simulating pipelines is easy; the more sophisticated IPC mechanisms required for engine/interface pairs are hard.)
 
-Owen Taylor, maintainer of the GTK+ library widely used for writing user interfaces under X, beautifully brings out the engineering benefits of this kind of partitioning at the end of his note Why GTK_MODULES is not a security hole <http://www.gtk.org/setuid.html>; he finishes by writing “[T]he secure setuid program is a 500 line program that does only what it needs to, rather than a 500,000 line library whose essential task is user interfaces”.
+Owen Taylor, maintainer of the GTK+ library widely used for writing user interfaces under X, beautifully brings out the engineering benefits of this kind of partitioning at the end of his note Why GTK_MODULES is not a security hole <http://www.gtk.org/setuid.html/>; he finishes by writing “[T]he secure setuid program is a 500 line program that does only what it needs to, rather than a 500,000 line library whose essential task is user interfaces”.
 
 This is not a new idea. Xerox PARC’s early research into graphical user interfaces led them to propose the “model-view-controller” pattern as an archetype for GUIs.
 
@@ -3776,7 +3776,7 @@ When the front and back ends of a system fulfilling this design pattern are comb
 
 The script-fu facility of GIMP is another good example. GIMP is a powerful open-source graphics editor. It has a GUI resembling that of Adobe Photoshop. Script-fu allows GIMP to be scripted using Scheme (a dialect of Lisp); scripting through Tcl, or Perl or Python is also available. Programs written in any of these languages can call GIMP internals through its plugin interface. The demonstration application for this facility is a Web page5 which allows people to construct simple logos and graphic buttons through a CGI interface that passes a generated Scheme program to an instance of GIMP, and returns a finished image.
 
-5 Script-Fu page <http://www.xcf.berkeley.edu/~gimp/script-fu/script-fu.html>.
+5 Script-Fu page <http://www.xcf.berkeley.edu/~gimp/script-fu/script-fu.html/>.
 
 
 ### 11.7 Applying Unix Interface-Design Patterns
@@ -3856,7 +3856,7 @@ Go ahead and give your GUIs progress bars for long operations. That’s good sty
 
 6 If your windowing system supports translucent popups that intrude less between the user and the application, use them.
 
-In general, it’s bad style to tell the user things he already knows (“Program <foo> is starting up...”, or “Program <foo> is exiting” are two classic offenders). Your interface design as a whole should obey the Rule of Least Surprise, but the content of messages should obey a Rule of Most Surprise—be chatty only about things that deviate from what’s normally expected.
+In general, it’s bad style to tell the user things he already knows (“Program <foo/> is starting up...”, or “Program <foo/> is exiting” are two classic offenders). Your interface design as a whole should obey the Rule of Least Surprise, but the content of messages should obey a Rule of Most Surprise—be chatty only about things that deviate from what’s normally expected.
 
 This rule has even greater force for confirmation prompts. Constantly asking for confirmation where the answer is almost always “yes” conditions the user to press “yes” without thinking about it, a habit that can have very unfortunate consequences. Programs should request confirmation only when there is good reason to suspect that the answer might be “no no no!” A confirmation request that is not a surprise is a strong hint of bad design. Any confirmation prompts at all may be a sign that what your interface really needs is an undo command.
 
@@ -4147,7 +4147,7 @@ Over the years, vi has bulked up considerably. Modern versions add mouse support
 #### 13.2.3 Sam
 The Sam editor5 was written by Rob Pike at Bell Labs in the mid-1980s. Sam was designed for the Plan 9 operating system, which we’ll survey in Chapter 20. While the Sam editor is not widely known outside the Labs, it’s favored by many of the original Unix developers who went on to work on Plan 9, including Ken Thompson himself.
 
-5 <http://plan9.bell-labs.com/sys/doc/sam/sam.html>
+5 <http://plan9.bell-labs.com/sys/doc/sam/sam.html/>
 
 Sam is a fairly straightforward descendant of ed, remaining much closer to its parent than vi. Sam incorporates only two new concepts: a curses-style text display and text selection with the mouse.
 
@@ -4185,9 +4185,9 @@ This power comes at a price in complexity. To use a customized Emacs you have to
 #### 13.2.5 Wily
 The wily editor7 is a clone of the Plan 9 editor acme.8 It shares some facilities with Sam, but is intended to provide a fundamentally different user experience. Although Wily probably sees the least widespread use of any of these editors, it is interesting because it illustrates a different and arguably more Unixy way of implementing an Emacs-like programmable editor.
 
-7 <http://www.cs.yorku.ca/~oz/wily>
+7 <http://www.cs.yorku.ca/~oz/wily/>
 
-8 <http://plan9.bell-labs.com/sys/doc/acme/acme.html>
+8 <http://plan9.bell-labs.com/sys/doc/acme/acme.html/>
 
 Wily could be described as a minimalist IDE, an implementation of Emacs-style extensibility without the decades of accompanying cruft. In Wily, even global search and replace, that sine qua non of Unix editors, is supplied by an external program. The built-in commands relate almost exclusively to windowing operations. Wily is designed from the ground up to use the mouse as much, and as well, as possible.
 
