@@ -25,6 +25,9 @@ hero:
     - theme: alt
       text: 7 Rules of Powers
       link: /docs/book-power/index
+    - theme: alt
+      text: The Art of UNIX Programming
+      link: /docs/book-art-unix-program/index
 
 features:
   - title: Feature A
