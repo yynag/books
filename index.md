@@ -28,6 +28,9 @@ hero:
     - theme: alt
       text: The Art of UNIX Programming
       link: /docs/book-art-unix-program/index
+    - theme: alt
+      text: The Mother Tongue
+      link: /docs/book-the-mother-tongue/index
 
 features:
   - title: Feature A
