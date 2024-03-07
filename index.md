@@ -29,6 +29,9 @@ hero:
       text: Fooled by Randomness
       link: /docs/book-incerto/fooled_randomness
     - theme: alt
+      text: The Bed of Procrustes
+      link: /docs/book-incerto/bed_of_procrustes
+    - theme: alt
       text: 7 Rules of Powers
       link: /docs/book-power/index
     - theme: alt
