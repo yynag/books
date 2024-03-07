@@ -23,6 +23,9 @@ hero:
       text: Antifragile
       link: /docs/book-incerto/antifragile
     - theme: alt
+      text: Skin in the Game
+      link: /docs/book-incerto/skiningame
+    - theme: alt
       text: 7 Rules of Powers
       link: /docs/book-power/index
     - theme: alt
