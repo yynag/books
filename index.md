@@ -26,6 +26,9 @@ hero:
       text: Skin in the Game
       link: /docs/book-incerto/skiningame
     - theme: alt
+      text: Fooled by Randomness
+      link: /docs/book-incerto/fooled_randomness
+    - theme: alt
       text: 7 Rules of Powers
       link: /docs/book-power/index
     - theme: alt
