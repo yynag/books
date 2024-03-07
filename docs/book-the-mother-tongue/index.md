@@ -1,5 +1,7 @@
 # The Mother Tongue
 
+[[toc]]
+
 ## Acknowledgments
 
 Among the many people to whom I am indebted for help in the preparation of this book, I must single out Jonathan Fenby of The Guardian, Tony Sikkema of the London Sunday Times and Dr. Takasuke Matsuo of Osaka, Japan, for generously assisting with questions regarding, respectively, the French, Dutch, and Japanese languages; Miles Kington of The Independent for kindly allowing me to reproduce two holorimes in the chapter on wordplay; Professor Robert Fulk of Indiana University for his careful reading; my mother, Mary Bryson, for providing a constant stream of clippings and other material; the staff of the Camden Public Library in London and of the Drake University Library in Des Moines for guiding me to sources that I would not otherwise have found; and above all, my wife, Cynthia, for her endless help and support.
